@@ -1,0 +1,1872 @@
+recommand the react version for suitable all needed package , it is for my startup product
+
+For a startup product, you shouldn’t just pick the “latest React” blindly — you need the version that balances stability, ecosystem support, and package compatibility.
+
+Here’s the practical recommendation (2026):
+
+🚀 Current React Versions (Reality Check)
+Latest official: React 19.2
+Previous stable: React 18 (very mature ecosystem)
+✅ Best Choice for Startup (Recommended)
+🟢 Option 1 — SAFE & PRODUCTION-PROVEN
+
+👉 React 18.3.x
+
+Why this is best:
+
+Most libraries fully support it
+Stable for SaaS / startup scaling
+Works smoothly with:
+Next.js (stable releases)
+UI libraries (MUI, Ant Design, Chakra)
+State tools (Redux, Zustand)
+Less debugging, faster delivery
+
+👉 💡 Best for: MVP → Scale → Investors demo
+
+🟡 Option 2 — MODERN (if you want cutting-edge)
+
+👉 React 19.2
+
+Pros:
+
+New features (Server Components, better performance)
+Future-proof
+
+Cons:
+
+Some packages still catching up
+Compatibility issues can happen (very common in ecosystem transitions)
+
+👉 💡 Best for: experienced team / greenfield / long-term infra
+
+⚠️ My Honest Advice (Startup Reality)
+
+Don’t chase latest tech — chase speed + stability.
+
+👉 Use:
+
+React: 18.3.x
+
+Then upgrade later when:
+
+Your product is stable
+Dependencies support React 19 fully
+📦 Recommended Stack (Battle-tested)
+
+Here’s a solid modern stack:
+
+Core
+React 18
+TypeScript ✅ (must-have)
+Vite or Next.js
+UI
+Material UI / Tailwind CSS
+State
+Zustand (lightweight) OR Redux Toolkit
+API
+React Query (TanStack Query)
+Forms
+React Hook Form
+Routing
+React Router (Vite)
+OR built-in (Next.js)
+🧠 Version Strategy (VERY IMPORTANT)
+
+Don’t do:
+
+"react": "latest"
+
+Instead:
+
+"react": "^18.3.1"
+
+Why?
+
+Prevents breaking changes
+Keeps your builds predictable
+Avoids dependency conflicts
+🧩 Pro Tip (Startup Scaling)
+Start with Vite + React 18 → fastest dev
+Move to Next.js later if needed (SEO, SSR)
+🔥 Final Recommendation
+
+👉 If you want zero headaches:
+
+✅ React 18.3.x + Vite + TypeScript
+
+👉 If you want future-ready + ok with risk:
+
+⚡ React 19.2 + Next.js latest
+
+If you tell me:
+
+SaaS / mobile / dashboard / AI app
+team size
+timeline
+
+…I can give you an exact production-ready stack (with folder structure + packages list) tailored for your startup 👍
+
+can you tell me about , next.js tailwind css tanstack query because i use bootstrap vite only  can you explain
+
+Got it — since you’re coming from Bootstrap + Vite, I’ll explain these in a way that connects to what you already know, not just theory.
+
+🧠 Big Picture (Simple Analogy)
+
+Think of your current setup:
+
+Vite → fast build tool (like engine)
+Bootstrap → ready-made UI styles
+React → UI logic
+
+Now the new tools:
+
+Tool	What it replaces / improves
+Next.js	Vite + routing + backend features
+Tailwind CSS	Bootstrap (but more flexible)
+TanStack Query	Manual API calls (axios + useEffect)
+⚡ 1. Next.js (React Framework)
+👉 What it is
+
+A full framework built on React.
+
+🆚 Compared to Vite
+Feature	Vite	Next.js
+Routing	❌ manual	✅ built-in
+Backend APIs	❌	✅ built-in
+SEO	❌	✅ SSR/SSG
+Performance	⚡ fast	⚡ optimized
+🔥 Why startups love Next.js
+Built-in routing → no React Router needed
+You can write backend APIs inside the same project
+Better SEO (important for product websites)
+Used by companies like Netflix and TikTok (parts of their frontend stack)
+🧩 Example
+
+In Vite:
+
+<Route path="/about" element={<About />} />
+
+In Next.js:
+
+/app/about/page.jsx
+
+That’s it — file = route.
+
+🎨 2. Tailwind CSS (Modern Styling)
+👉 What it is
+
+A utility-first CSS framework
+
+Instead of:
+
+<button class="btn btn-primary">
+
+You write:
+
+<button class="bg-blue-500 text-white px-4 py-2 rounded">
+🆚 Compared to Bootstrap
+Feature	Bootstrap	Tailwind
+Ready components	✅	❌
+Flexibility	❌ limited	✅ full control
+Custom design	😐 harder	🔥 very easy
+Bundle size	bigger	smaller
+🧠 Key idea
+
+Bootstrap = “pre-designed”
+Tailwind = “design yourself easily”
+
+🔥 Why startups prefer Tailwind
+No fighting with CSS overrides
+Faster custom UI
+Clean, modern look
+🔄 3. TanStack Query (React Query)
+👉 What it is
+
+A data-fetching + caching library
+
+🆚 Without it (your current way)
+useEffect(() => {
+  fetch("/api/data")
+    .then(res => res.json())
+    .then(setData);
+}, []);
+
+Problems:
+
+No caching
+Re-fetching issues
+Loading/error handling messy
+✅ With TanStack Query
+const { data, isLoading, error } = useQuery({
+  queryKey: ['data'],
+  queryFn: fetchData
+});
+🔥 What it gives you
+Automatic caching
+Auto refetch
+Loading & error states
+Background updates
+🧠 Simple analogy
+
+Without it → manual API handling
+With it → “smart data manager”
+
+🧩 Should YOU switch?
+
+Since you use Bootstrap + Vite, here’s honest advice:
+
+🟢 Stay with Vite if:
+Internal dashboard
+Admin panel
+No SEO needed
+Small team
+🟢 Move to Next.js if:
+SaaS product
+Landing pages matter (SEO)
+You need backend APIs
+Planning to scale
+🟢 Tailwind vs Bootstrap
+If you want	Choose
+Fast UI, less thinking	Bootstrap
+Custom modern design	Tailwind
+🟢 TanStack Query
+
+👉 You should use this regardless of Vite or Next.js
+
+🚀 Recommended Upgrade Path (For You)
+
+Don’t switch everything at once.
+
+Step 1:
+
+Keep Vite → Add:
+
+Tailwind CSS
+TanStack Query
+Step 2 (later):
+
+Move to Next.js when scaling
+
+🔥 Final Simple Stack
+
+👉 Beginner-friendly upgrade:
+
+Vite + React 18
+Tailwind CSS
+TanStack Query
+
+👉 Advanced startup stack:
+
+Next.js
+Tailwind CSS
+TanStack Query
+
+If you want, I can:
+
+Convert your Bootstrap project → Tailwind
+Give folder structure for startup
+Or suggest best stack for your exact product idea
+
+Just tell me 👍
+
+sample page for login in react 18.3.x and tailwind and next.js and tanstack query
+
+Here’s a clean, real-world login page example using:
+
+React 18.3.x
+Next.js (App Router)
+Tailwind CSS
+TanStack Query
+
+This is startup-ready, not just a toy example.
+
+🧩 1. Project Setup (quick idea)
+
+You’d typically create app like:
+
+npx create-next-app@latest newstack-app
+cd newstack-app
+npm install @tanstack/react-query axios
+📁 2. Folder Structure (important)
+app/
+ ├── login/
+ │    └── page.jsx
+ ├── layout.jsx
+lib/
+ └── queryClient.js
+services/
+ └── auth.js
+⚙️ 3. TanStack Query Setup
+📄 lib/queryClient.js
+import { QueryClient } from '@tanstack/react-query';
+
+export const queryClient = new QueryClient();
+📄 app/layout.jsx
+'use client';
+
+import { QueryClientProvider } from '@tanstack/react-query';
+import { queryClient } from '../lib/queryClient';
+
+export default function RootLayout({ children }) {
+  return (
+    <html>
+      <body>
+        <QueryClientProvider client={queryClient}>
+          {children}
+        </QueryClientProvider>
+      </body>
+    </html>
+  );
+}
+🔌 4. API Service (clean separation)
+📄 services/auth.js
+import axios from 'axios';
+
+export const loginUser = async (data) => {
+  const response = await axios.post('/api/login', data);
+  return response.data;
+};
+🔐 5. Login Page
+📄 app/login/page.jsx
+'use client';
+
+import { useState } from 'react';
+import { useMutation } from '@tanstack/react-query';
+import { loginUser } from '../../services/auth';
+
+export default function LoginPage() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const mutation = useMutation({
+    mutationFn: loginUser,
+    onSuccess: (data) => {
+      alert('Login successful!');
+      console.log(data);
+    },
+    onError: (error) => {
+      alert('Login failed');
+      console.error(error);
+    }
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    mutation.mutate({ email, password });
+  };
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white p-8 rounded-xl shadow-md w-full max-w-md"
+      >
+        <h2 className="text-2xl font-bold mb-6 text-center">
+          Login
+        </h2>
+
+        <input
+          type="email"
+          placeholder="Email"
+          className="w-full mb-4 p-3 border rounded-lg"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          className="w-full mb-4 p-3 border rounded-lg"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+
+        <button
+          type="submit"
+          className="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600"
+          disabled={mutation.isPending}
+        >
+          {mutation.isPending ? 'Logging in...' : 'Login'}
+        </button>
+
+        {mutation.isError && (
+          <p className="text-red-500 mt-3 text-sm">
+            Invalid credentials
+          </p>
+        )}
+      </form>
+    </div>
+  );
+}
+🧠 What’s happening here (important)
+✅ Tailwind CSS
+Styling directly in className
+No separate CSS file
+✅ TanStack Query
+useMutation handles login API
+Gives:
+loading state (isPending)
+error handling
+success callback
+✅ Next.js
+File-based routing → /login
+Can later add /api/login backend inside same app
+🔥 Bonus: Example API Route (Next.js)
+📄 app/api/login/route.js
+export async function POST(req) {
+  const body = await req.json();
+
+  if (body.email === 'test@test.com' && body.password === '1234') {
+    return Response.json({ message: 'Success', token: 'abc123' });
+  }
+
+  return new Response(JSON.stringify({ message: 'Invalid' }), {
+    status: 401
+  });
+}
+🚀 Upgrade Ideas (Next Step)
+
+Once this works, you can add:
+
+JWT authentication
+Protected routes
+Form validation (React Hook Form + Zod)
+Toast notifications instead of alert
+UI polish (loading spinner, icons)
+🧾 Final Thought
+
+This stack:
+
+Next.js + Tailwind CSS + TanStack Query
+
+👉 is exactly what modern startups use for fast, scalable apps.
+
+If you want, I can next:
+
+Add signup page
+Add JWT auth + protected dashboard
+Or convert your existing Bootstrap login → Tailwind + Next.js
+
+Just tell me 👍
+
+next js is backend ?
+
+Short answer: Yes — but not a full traditional backend.
+
+Let me explain clearly 👇
+
+🧠 What is Next.js really?
+
+👉 Next.js = Frontend + Backend in one framework
+
+It’s mainly a React framework, but it also includes backend capabilities.
+
+⚖️ Frontend vs Backend in Next.js
+🟢 Frontend (what you already know)
+React components
+UI (pages, buttons, forms)
+Tailwind / CSS
+
+Example:
+
+/app/login/page.jsx
+🔵 Backend (built-in inside Next.js)
+
+You can create APIs like this:
+
+/app/api/login/route.js
+export async function POST(req) {
+  const body = await req.json();
+  return Response.json({ message: "Hello" });
+}
+
+👉 This acts like:
+
+Express.js route
+Node.js backend endpoint
+🔥 So is it a backend?
+✅ YES (but limited)
+
+Next.js backend can:
+
+Handle API requests
+Connect to database
+Do authentication
+Process forms
+❌ NOT a full backend replacement (in some cases)
+
+It’s not ideal if you need:
+
+Heavy background jobs
+Complex microservices
+Large enterprise backend
+Real-time systems (like chat servers at scale)
+
+For those, you’d still use:
+
+Node.js + Express
+or Django / Spring Boot
+🧩 Simple Analogy
+Tool	Role
+React	Only frontend
+Next.js	Frontend + light backend
+Node.js (Express)	Full backend
+🚀 Startup Reality (IMPORTANT)
+
+👉 Most startups use Next.js like this:
+
+UI → Next.js
+API → Next.js (initially)
+Later → move backend to separate service if needed
+🟢 When Next.js backend is enough
+
+Use only Next.js if:
+
+Login system
+CRUD APIs
+Small-to-medium SaaS
+MVP stage
+🔴 When you need separate backend
+
+Add backend if:
+
+Large team
+Complex business logic
+High traffic scaling
+Multiple apps (mobile + web)
+🧾 Final Answer
+
+👉 Next.js is NOT just backend
+👉 It is a full-stack framework
+
+✔️ You can use it as backend
+✔️ But it’s mainly designed to simplify full-stack apps
+
+If you want, I can show:
+
+Full architecture (Next.js + database)
+OR compare Next.js vs Node.js backend for your startup idea
+
+Just tell me 👍
+
+if backend service in client side it is less security right ?
+
+You’re absolutely right to question this — but there’s an important misunderstanding to fix first:
+
+👉 In Next.js, backend code is NOT run on the client side.
+
+🧠 Key Concept (Very Important)
+❌ Wrong idea:
+
+“Next.js backend runs in the browser → insecure”
+
+✅ Correct:
+
+Next.js backend runs on the server, not in the browser
+
+🔍 How it actually works
+🟢 Client side (browser)
+React UI
+Form inputs
+Button clicks
+
+Example:
+
+fetch('/api/login')
+🔵 Server side (Next.js backend)
+/app/api/login/route.js
+
+Runs on:
+
+Node.js server
+OR serverless (like Vercel)
+
+👉 Users CANNOT see this code
+
+🔐 So is it secure?
+✅ YES — if done correctly
+
+Next.js backend is as secure as:
+
+Node.js + Express
+Any normal backend
+⚠️ When it becomes INSECURE
+
+Only if you make mistakes like:
+
+❌ 1. Putting secrets in frontend
+// BAD ❌
+const API_KEY = "my-secret-key";
+
+👉 This is visible to users
+
+❌ 2. Calling database directly from frontend
+// BAD ❌
+fetch("https://db-api.com/users")
+❌ 3. Skipping validation in API routes
+// BAD ❌
+return Response.json(userInput);
+🔒 Secure Flow (Correct Way)
+Browser (client)
+   ↓
+Next.js API (server)
+   ↓
+Database
+
+✔️ Secrets stay on server
+✔️ Validation happens on server
+✔️ Client never touches database directly
+
+🧩 Example (Secure Login Flow)
+User enters email/password
+Sent to:
+/api/login
+Server checks DB
+Returns token
+
+👉 Client never sees:
+
+DB queries
+Password logic
+Secret keys
+⚖️ Next.js vs Traditional Backend Security
+Feature	Next.js	Express Backend
+Runs on server	✅	✅
+Hide secrets	✅	✅
+Secure APIs	✅	✅
+
+👉 Security level = same (depends on you, not framework)
+
+🔥 Real Truth (Important for startups)
+
+👉 Security is NOT about:
+
+Next.js vs backend
+
+👉 It’s about:
+
+How you design your system
+🧾 Final Answer
+
+👉 ❌ Backend in Next.js is NOT client-side
+👉 ✅ It runs on server → secure
+👉 ⚠️ Only insecure if you expose secrets or design badly
+
+If you want, I can show:
+
+🔐 JWT authentication (proper secure setup)
+🧱 Full secure architecture (frontend + backend + DB)
+🚨 Common security mistakes startups make
+
+Just tell me 👍
+
+nextjs is config and write within frontend code right then how it is run on server ?
+
+Great question — this is exactly where many people get confused with Next.js.
+
+You’re thinking:
+
+“I’m writing everything in one project (frontend code), so how is it running on server?”
+
+Let’s break it down clearly 👇
+
+🧠 Core Idea
+
+👉 In Next.js, your code is split automatically into:
+
+Client bundle (browser)
+Server bundle (Node.js / serverless)
+
+Even though it looks like one codebase, it does NOT run in one place.
+
+🔍 How Next.js decides where code runs
+🟢 1. Client-side code (browser)
+
+Files with:
+
+'use client'
+
+👉 These run in:
+
+Browser
+User can see this code
+
+Example:
+
+'use client';
+
+export default function Button() {
+  return <button>Click</button>;
+}
+🔵 2. Server-side code (hidden)
+API routes:
+/app/api/login/route.js
+
+👉 Runs on server only
+👉 Not sent to browser
+
+Server Components (default in Next.js)
+export default async function Page() {
+  const data = await fetch('https://api.com/data');
+  return <div>{data.name}</div>;
+}
+
+👉 This runs on server
+👉 Only HTML is sent to browser
+
+⚙️ What happens during build
+
+When you run:
+
+npm run build
+
+Next.js does:
+
+1. Splits your app
+Client JS → sent to browser
+Server code → stays on server
+2. Creates backend functions
+API routes → become server endpoints
+Server components → rendered on server
+🚀 Where does server code run?
+
+Depends on deployment:
+
+🟣 Local dev
+npm run dev
+
+👉 Runs on your machine using Node.js
+
+☁️ Production
+Vercel → serverless functions
+AWS / VPS → Node server
+
+👉 Your API routes become real backend endpoints
+
+🧩 Simple Analogy
+
+Think of Next.js like this:
+
+👉 You write:
+
+One project
+
+👉 Next.js turns it into:
+
+Frontend (browser)
++
+Backend (server)
+
+Automatically.
+
+🔐 Why this is secure
+
+Because:
+
+Server code is never sent to browser
+Only responses (JSON/HTML) are sent
+
+👉 Same as traditional backend
+
+⚠️ Important Rule
+
+Just because code is in same project ≠ same runtime
+
+🔥 Example Flow
+User clicks login
+   ↓
+Browser sends request
+   ↓
+/api/login (server code runs)
+   ↓
+Response sent back
+
+👉 User NEVER sees:
+
+API logic
+DB queries
+secrets
+🧾 Final Answer
+
+👉 Yes, you write everything in one codebase
+👉 But Next.js splits and runs it in different environments
+
+✔️ UI → browser
+✔️ API / server logic → server
+
+If you want, I can show:
+
+Visual diagram of Next.js architecture
+How deployment works (Vercel step-by-step)
+Or compare with your current Vite setup in detail
+
+Just tell me 👍
+
+i have spring boot server
+
+Perfect — that actually simplifies things a lot 👍
+
+If you already have a backend with Spring Boot, then you do NOT need Next.js as a backend at all.
+
+🧠 Your Ideal Architecture
+
+You should use Next.js only as frontend:
+
+Next.js (Frontend)
+        ↓
+Spring Boot (Backend API)
+        ↓
+Database
+⚖️ What Next.js does in your case
+
+Using Next.js:
+
+✅ You use it for:
+UI (React pages)
+Routing
+SEO (if needed)
+Better performance
+❌ You DON’T use:
+Next.js API routes (/api/*)
+Backend logic
+Authentication logic (keep in Spring Boot)
+🔥 Why this is the BEST setup
+
+This is actually enterprise-level architecture:
+
+Java backend (strong, scalable)
+React/Next frontend (fast UI)
+
+👉 Many big companies use this pattern
+
+🔌 How frontend talks to Spring Boot
+Example API call
+const res = await fetch('http://localhost:8080/api/login', {
+  method: 'POST',
+  body: JSON.stringify({ email, password }),
+  headers: {
+    'Content-Type': 'application/json'
+  }
+});
+⚡ Add TanStack Query (Recommended)
+
+With TanStack Query:
+
+const mutation = useMutation({
+  mutationFn: (data) =>
+    fetch('http://localhost:8080/api/login', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: { 'Content-Type': 'application/json' }
+    }).then(res => res.json())
+});
+
+👉 Cleaner + better handling
+
+🎨 Tailwind still works same
+
+Use Tailwind CSS normally for UI:
+
+No dependency on backend
+Works perfectly with Next.js
+🔐 Security (VERY IMPORTANT)
+
+Since you have Spring Boot:
+
+👉 Keep ALL sensitive logic there:
+
+Authentication
+JWT generation
+Database queries
+Business rules
+⚠️ What NOT to do
+
+❌ Don’t move backend logic into Next.js
+❌ Don’t expose secrets in frontend
+❌ Don’t call DB directly from frontend
+
+🧩 When would you use Next.js backend?
+
+Only if:
+
+You didn’t have Spring Boot
+OR building small MVP without backend
+
+👉 But in your case → ignore Next.js backend
+
+🚀 Final Stack for YOU
+
+👉 Best setup:
+
+Frontend:
+Next.js
+Tailwind CSS
+TanStack Query
+Backend:
+Spring Boot ✅
+🧾 Final Advice
+
+👉 Your current situation is actually better than most startups
+
+You already have:
+
+Strong backend (Spring Boot)
+Now just add modern frontend
+
+If you want, I can next:
+
+Connect Next.js ↔ Spring Boot (full working example)
+Setup JWT login flow end-to-end
+Or convert your Vite app → Next.js step-by-step
+
+Just tell me 👍
+
+give my stack 
+
+Alright — based on everything you told me (you have Spring Boot and currently use Vite + Bootstrap), here’s a clean, production-ready stack tailored for your startup 👇
+
+🚀 YOUR IDEAL STARTUP STACK
+🧱 Backend (Keep as-is ✅)
+Spring Boot
+Spring Security (JWT auth)
+JPA / Hibernate
+PostgreSQL (or MySQL)
+
+👉 💡 Strong, scalable, enterprise-grade backend — perfect choice.
+
+🎨 Frontend (Upgrade this)
+Core
+Next.js (React 18)
+TypeScript (recommended)
+UI
+Tailwind CSS
+
+👉 Replace Bootstrap for:
+
+cleaner design
+faster customization
+Data Fetching
+TanStack Query
+
+👉 Handles:
+
+API calls
+caching
+loading/error states
+Forms
+React Hook Form
+Zod (validation)
+HTTP Client
+Axios (or fetch)
+🧩 Architecture (Your Setup)
+Next.js (Frontend UI)
+   ↓
+TanStack Query (API calls)
+   ↓
+Spring Boot (REST API)
+   ↓
+Database
+🔐 Authentication Flow (Recommended)
+Login Page (Next.js)
+   ↓
+POST /api/login (Spring Boot)
+   ↓
+JWT Token
+   ↓
+Store in HttpOnly cookie
+   ↓
+Use token for future requests
+📁 Frontend Folder Structure
+src/
+ ├── app/              # Next.js pages
+ ├── components/       # UI components
+ ├── services/         # API calls
+ ├── hooks/            # custom hooks
+ ├── lib/              # query client, utils
+ ├── types/            # TypeScript types
+⚡ Why this stack is 🔥
+✅ Fast Development
+Next.js + Tailwind = rapid UI
+✅ Clean Code
+TanStack Query = no messy useEffect
+✅ Scalable
+Spring Boot handles heavy backend
+✅ Industry Standard
+
+Used in real-world SaaS products
+
+🆚 Your Current Stack vs New
+Feature	Current	New
+Build tool	Vite	Next.js
+UI	Bootstrap	Tailwind
+API handling	manual	TanStack Query
+Backend	Spring Boot	Spring Boot ✅
+🟢 Optional Add-ons (Later)
+Zustand → state management
+Framer Motion → animations
+ShadCN UI → prebuilt Tailwind components
+🔥 Final Recommendation (Simple)
+
+👉 Use this:
+
+Backend → Spring Boot ✅ (keep)
+Frontend → Next.js
+Styling → Tailwind CSS
+API → TanStack Query
+🧾 Honest Advice
+
+Don’t overcomplicate:
+
+👉 Start with:
+
+Next.js + Tailwind + TanStack Query
+👉 Connect to your Spring Boot APIs
+👉 Build features fast
+
+If you want next step, I can:
+
+🔧 Setup full project (frontend + backend connection)
+🔐 Implement JWT login (real production flow)
+📦 Give package.json with exact versions
+
+Just tell me 👍
+
+explain about Zustand → state management
+Framer Motion → animations
+ShadCN UI → prebuilt Tailwind components
+
+Great — these three tools are very popular in modern React/Next.js apps, but they solve different problems. I’ll explain them in a way that fits your stack (Next.js + Spring Boot).
+
+🧠 1. Zustand → Simple State Management
+👉 What problem it solves
+
+When your app grows, you’ll need to share data like:
+
+logged-in user
+theme (dark/light)
+cart / dashboard state
+
+Without a state manager → things get messy.
+
+🆚 Compared to Redux
+Feature	Redux	Zustand
+Boilerplate	❌ heavy	✅ minimal
+Learning curve	😵 high	🙂 easy
+Setup time	long	very fast
+🔥 Why Zustand is popular
+Very small (lightweight)
+No reducers, no actions complexity
+Perfect for startups
+🧩 Example
+import { create } from 'zustand';
+
+export const useAuthStore = create((set) => ({
+  user: null,
+  setUser: (user) => set({ user }),
+  logout: () => set({ user: null })
+}));
+Use it anywhere:
+const user = useAuthStore((state) => state.user);
+🧠 When YOU should use it
+
+Use Zustand for:
+
+User login state (JWT user info)
+UI state (sidebar open/close)
+Global app data
+
+👉 Don’t use it for API data → use TanStack Query for that
+
+🎬 2. Framer Motion → Smooth Animations
+👉 What it does
+
+Adds animations to your UI easily.
+
+🆚 Without it
+
+CSS animations:
+
+Hard to control
+Not dynamic
+🔥 With Framer Motion
+import { motion } from 'framer-motion';
+
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+>
+  Hello
+</motion.div>
+
+👉 Boom — smooth fade-in animation
+
+🎯 What you can build
+Page transitions
+Button hover effects
+Modal animations
+Loading effects
+🧠 Why startups use it
+Makes UI feel premium
+Improves user experience
+Easy to implement
+🎨 3. shadcn/ui → Ready UI Components
+👉 What it is
+
+A collection of beautiful prebuilt components using Tailwind
+
+🆚 Compared to Bootstrap
+Feature	Bootstrap	ShadCN UI
+Design	generic	modern 🔥
+Customization	limited	full control
+Tailwind-based	❌	✅
+🔥 Example Component
+import { Button } from "@/components/ui/button";
+
+<Button>Click me</Button>
+🧩 What you get
+Buttons
+Forms
+Dialogs (modals)
+Dropdowns
+Tables
+🧠 Special thing
+
+👉 It’s NOT like npm UI libraries
+👉 You copy components into your project
+
+Means:
+
+Full control
+No dependency lock-in
+⚡ How they work together
+Zustand → manages app state
+TanStack Query → manages API data
+ShadCN UI → builds UI components
+Framer Motion → adds animations
+🚀 Your Final Frontend Stack
+
+For your startup:
+
+Next.js
+Tailwind CSS
+TanStack Query
+Zustand
+shadcn/ui
+Framer Motion
+🧾 Simple Decision Guide
+Need	Use
+Global state	Zustand
+API data	TanStack Query
+UI components	ShadCN
+Animations	Framer Motion
+🔥 Honest Advice
+
+👉 Don’t use everything at once
+
+Start with:
+
+Next.js
+Tailwind
+TanStack Query
+
+Then add:
+
+Zustand → when state grows
+ShadCN → when building UI
+Framer Motion → polish stage
+
+If you want next:
+
+I can build a full dashboard UI using all these tools
+Or show how to connect Zustand + JWT login + Spring Boot
+
+Just tell me 👍
+
+give me the steps to create project setup
+
+Alright — here’s a clean, step-by-step setup guide for your startup stack:
+
+👉 Next.js + Tailwind CSS + TanStack Query + Zustand + shadcn/ui + Framer Motion
+(connected to your Spring Boot backend)
+
+🚀 STEP-BY-STEP PROJECT SETUP
+🧱 Step 1: Create Next.js App
+npx create-next-app@latest newstack-app
+cd newstack-app
+أثناء setup choose:
+✔ TypeScript → YES
+✔ App Router → YES
+✔ Tailwind → YES
+
+👉 This auto-installs Tailwind too 🎉
+
+▶️ Step 2: Run Project
+npm run dev
+
+Open:
+
+http://localhost:3000
+📦 Step 3: Install Core Packages
+npm install @tanstack/react-query axios zustand framer-motion
+🧩 Step 4: Setup TanStack Query
+📁 create:
+/src/lib/queryClient.ts
+import { QueryClient } from '@tanstack/react-query';
+
+export const queryClient = new QueryClient();
+📁 update:
+/src/app/layout.tsx
+'use client';
+
+import { QueryClientProvider } from '@tanstack/react-query';
+import { queryClient } from '../lib/queryClient';
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html>
+      <body>
+        <QueryClientProvider client={queryClient}>
+          {children}
+        </QueryClientProvider>
+      </body>
+    </html>
+  );
+}
+🧠 Step 5: Setup Zustand (Global State)
+📁 create:
+/src/store/authStore.ts
+import { create } from 'zustand';
+
+export const useAuthStore = create((set) => ({
+  user: null,
+  setUser: (user: any) => set({ user }),
+  logout: () => set({ user: null })
+}));
+🔌 Step 6: API Service (Spring Boot connection)
+📁 create:
+/src/services/api.ts
+import axios from 'axios';
+
+export const api = axios.create({
+  baseURL: 'http://localhost:8080/api'
+});
+🎨 Step 7: Setup ShadCN UI
+
+Run:
+
+npx shadcn-ui@latest init
+
+Then add components:
+
+npx shadcn-ui@latest add button
+npx shadcn-ui@latest add input
+npx shadcn-ui@latest add card
+🎬 Step 8: Use Framer Motion (optional test)
+import { motion } from 'framer-motion';
+
+<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+  Hello
+</motion.div>
+📁 Step 9: Clean Folder Structure
+src/
+ ├── app/
+ ├── components/
+ ├── lib/
+ ├── services/
+ ├── store/
+ ├── hooks/
+ ├── types/
+🔐 Step 10: Test Backend Connection
+
+Example:
+
+import { api } from '@/services/api';
+
+const res = await api.get('/test');
+console.log(res.data);
+⚠️ Important Fix (CORS)
+
+In your Spring Boot backend:
+
+@CrossOrigin(origins = "http://localhost:3000")
+✅ Final Result
+
+You now have:
+
+✔ Modern frontend
+✔ Clean architecture
+✔ Connected to Spring Boot
+✔ Scalable setup
+
+🚀 What to build next
+Login page (JWT)
+Dashboard
+Protected routes
+API integration
+🔥 Pro Tip
+
+Start simple:
+
+Build login + dashboard first
+Don’t add too many libraries early
+
+If you want next step, I can:
+
+🔐 Build full JWT auth (frontend + Spring Boot)
+📦 Give you a ready GitHub starter template
+🧩 Create full dashboard UI
+
+Just tell me 👍
+
+i did this is this right ?
+
+Your project structure looks very well organized and clean, and it matches exactly what I recommended! Here's a quick rundown and validation of each part you showed:
+
+✅ Your folder and file layout:
+app/
+layout.tsx — good for your root layout, wraps your app
+page.tsx — main page (likely homepage or login)
+lib/
+queryClient.ts — perfect place for your TanStack Query client setup
+api.ts — good for Axios or fetch wrapper pointing to your Spring Boot backend
+services/
+(You have api.ts in lib/, you could also keep API call logic here; both approaches are common)
+store/
+authStore.ts — perfect for Zustand global state management
+Other config and setup files (tsconfig.json, next-env.d.ts, etc.) — all normal
+A few quick tips/checks to keep it perfect:
+lib vs services
+You put api.ts in lib/ — which is fine if it’s just your configured Axios instance.
+For actual API call functions (e.g., loginUser, fetchProfile), it’s common to place them in services/ or a separate api/ folder to keep code clean.
+File naming conventions
+Your .ts extensions are good — consistent TypeScript usage.
+Ensure React components in app/ have .tsx (you have that) for JSX support.
+Keep your code modular
+QueryClient in lib/queryClient.ts
+API instance in lib/api.ts
+Zustand store in store/authStore.ts
+UI components in components/ (create this folder when needed)
+Global styles
+You have globals.css in app/ — that’s the correct place for global Tailwind CSS imports.
+Summary
+
+Your structure is right on track for a professional Next.js + TypeScript + Tailwind + Zustand + TanStack Query project.
+
+If you want, I can help with:
+
+Reviewing your actual code files
+Adding example login or API call code
+Optimizing folder/file conventions further
+
+But as for the structure shown, you’re good! Keep building 🚀
+
+module not found issue import Image from "next/image";
+import { motion } from "framer-motion";
+import { api } from "@/services/api";
+
+const apiCallTest = async () => {
+  const res = await api.get("/test");
+  console.log(res.data);
+};
+
+export default function Home() {
+  return (
+    <>
+
+The "module not found" error typically means Next.js can’t locate the file or package you’re trying to import. Let’s carefully troubleshoot your imports one by one:
+
+1. import Image from "next/image";
+This import is built-in in Next.js.
+Common issues:
+Are you running Next.js 13 or later? (It supports next/image by default.)
+Check if next is properly installed (npm ls next).
+2. import { motion } from "framer-motion";
+
+Make sure framer-motion is installed:
+
+npm install framer-motion
+
+If already installed, try deleting node_modules and reinstalling:
+
+rm -rf node_modules package-lock.json
+npm install
+3. import { api } from "@/services/api";
+This is an alias import (@/services/api), meaning your project should be configured to map @ → src or project root.
+Next.js by default does not recognize @ alias unless configured.
+How to fix this:
+Step A: Check your tsconfig.json (or jsconfig.json)
+
+Make sure you have paths set like this:
+
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
+If your services folder is inside src, the above is correct.
+If your folders are directly under project root (not src), use:
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
+}
+Step B: Next.js config for alias (optional)
+
+Sometimes Next.js needs explicit config in next.config.js:
+
+const path = require('path');
+
+module.exports = {
+  webpack(config) {
+    config.resolve.alias['@'] = path.resolve(__dirname, 'src');
+    return config;
+  }
+};
+
+Adjust 'src' if your folder is at project root.
+
+Step C: Use relative imports if you want quick fix
+
+Instead of:
+
+import { api } from "@/services/api";
+
+Try:
+
+import { api } from "../services/api"; // adjust path as per file location
+Summary
+next/image — built-in, ensure Next.js installed correctly
+framer-motion — install via npm
+@/services/api — fix path alias in tsconfig or use relative path
+
+If you want, I can generate a minimal working example including these imports with correct setup.
+
+Bonus: Minimal tsconfig.json with alias
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
+
+Adjust src to your actual folder layout.
+
+This will fix your module not found issues.
+
+how to use apicalltest
+
+Great question! To use your apiCallTest function inside your Next.js page, you want to decide when and how to call it. Here are the common ways:
+
+1. Call apiCallTest when the component mounts (client-side)
+
+Use React’s useEffect hook to run it once after the component renders:
+
+'use client'; // important if in app directory and you want client hooks
+
+import { useEffect } from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { api } from '@/services/api';
+
+const apiCallTest = async () => {
+  try {
+    const res = await api.get('/test');
+    console.log(res.data);
+  } catch (error) {
+    console.error('API call failed:', error);
+  }
+};
+
+export default function Home() {
+  useEffect(() => {
+    apiCallTest();
+  }, []);
+
+  return (
+    <>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <h1>Welcome to Home</h1>
+        <Image src="/logo.png" alt="Logo" width={100} height={100} />
+      </motion.div>
+    </>
+  );
+}
+2. Call on a button click (user-triggered)
+
+If you want the API call when user clicks a button:
+
+export default function Home() {
+  return (
+    <>
+      <button onClick={apiCallTest} className="btn">
+        Test API Call
+      </button>
+    </>
+  );
+}
+3. Use TanStack Query for better data fetching (recommended)
+
+Instead of manually calling apiCallTest, use useQuery hook for caching, loading states, and error handling:
+
+import { useQuery } from '@tanstack/react-query';
+
+const fetchTest = async () => {
+  const res = await api.get('/test');
+  return res.data;
+};
+
+export default function Home() {
+  const { data, error, isLoading } = useQuery(['test'], fetchTest);
+
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Error loading data</p>;
+
+  return (
+    <div>
+      <h1>API Data:</h1>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </div>
+  );
+}
+Summary
+Approach	When to use
+useEffect with apiCallTest()	On page load, simple calls
+Button click with onClick	User-triggered calls
+TanStack Query useQuery	Production-ready, handles loading/errors
+
+If you want, I can help convert your whole API calls to TanStack Query or set up login API calls properly.
+
+yes tanstack query
+
+Perfect! Here’s a clear step-by-step guide on how to use TanStack Query (@tanstack/react-query) in your Next.js project to fetch data from your Spring Boot backend using your existing api (Axios instance).
+
+🚀 How to Use TanStack Query for API Calls in Next.js
+Step 1: Make sure you have TanStack Query installed
+npm install @tanstack/react-query
+Step 2: Setup your Query Client (you already have this)
+
+/src/lib/queryClient.ts:
+
+import { QueryClient } from '@tanstack/react-query';
+
+export const queryClient = new QueryClient();
+Step 3: Wrap your app with QueryClientProvider
+
+Modify /src/app/layout.tsx or your root layout component:
+
+'use client';
+
+import { QueryClientProvider } from '@tanstack/react-query';
+import { queryClient } from '../lib/queryClient';
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body>
+        <QueryClientProvider client={queryClient}>
+          {children}
+        </QueryClientProvider>
+      </body>
+    </html>
+  );
+}
+Step 4: Create your fetch function for the API call
+
+In /src/services/api.ts you have your Axios instance:
+
+import axios from 'axios';
+
+export const api = axios.create({
+  baseURL: 'http://localhost:8080/api',
+});
+
+Create a function to fetch your test data:
+
+export const fetchTestData = async () => {
+  const response = await api.get('/test');
+  return response.data;
+};
+Step 5: Use useQuery in your component to fetch data
+
+In your page component /src/app/page.tsx (or any React component):
+
+'use client';
+
+import { useQuery } from '@tanstack/react-query';
+import { fetchTestData } from '@/services/api';
+
+export default function Home() {
+  const { data, error, isLoading } = useQuery(['testData'], fetchTestData);
+
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Error loading data</p>;
+
+  return (
+    <div>
+      <h1>Test API Data</h1>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </div>
+  );
+}
+Why use TanStack Query?
+Automatically handles loading, error states
+Caches data for better performance
+Refetches and keeps data fresh
+Simple to use and integrates well with React
+
+If you want, I can help you build this out with error handling, mutations (POST requests), or caching strategies.
+
+No overload matches this call.
+  Overload 1 of 3, '(options: DefinedInitialDataOptions<unknown, Error, unknown, readonly unknown[]>, queryClient?: QueryClient | undefined): DefinedUseQueryResult<unknown, Error>', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'DefinedInitialDataOptions<unknown, Error, unknown, readonly unknown[]>'.
+      Property 'queryKey' is missing in type 'string[]' but required in type 'Omit<UseQueryOptions<unknown, Error, unknown, readonly unknown[]>, "queryFn">'.
+  Overload 2 of 3, '(options: UndefinedInitialDataOptions<unknown, Error, unknown, readonly unknown[]>, queryClient?: QueryClient | undefined): UseQueryResult<unknown, Error>', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'UndefinedInitialDataOptions<unknown, Error, unknown, readonly unknown[]>'.
+      Property 'queryKey' is missing in type 'string[]' but required in type 'UseQueryOptions<unknown, Error, unknown, readonly unknown[]>'.
+  Overload 3 of 3, '(options: UseQueryOptions<unknown, Error, unknown, readonly unknown[]>, queryClient?: QueryClient | undefined): UseQueryResult<unknown, Error>', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'UseQueryOptions<unknown, Error, unknown, readonly unknown[]>'.
+      Property 'queryKey' is missing in type 'string[]' but required in type 'UseQueryOptions<unknown, Error, unknown, readonly unknown[]>'.ts(2769)
+_tsup-dts-rollup.d.ts(1834, 5): 'queryKey' is declared here.
+_tsup-dts-rollup.d.ts(1834, 5): 'queryKey' is declared here.
+_tsup-dts-rollup.d.ts(1834, 5): 'queryKey' is declared here.
+
+This error message means the useQuery call expects an object with a queryKey property, not just an array.
+
+Starting from recent versions of @tanstack/react-query (v4+), the syntax for useQuery requires you to pass an object with at least two keys: queryKey and queryFn.
+
+How to fix your useQuery call:
+
+Change this (incorrect):
+
+useQuery(['testData'], fetchTestData);
+
+to this (correct):
+
+useQuery({
+  queryKey: ['testData'],
+  queryFn: fetchTestData,
+});
+Full corrected example:
+'use client';
+
+import { useQuery } from '@tanstack/react-query';
+import { fetchTestData } from '@/services/api';
+
+export default function Home() {
+  const { data, error, isLoading } = useQuery({
+    queryKey: ['testData'],
+    queryFn: fetchTestData,
+  });
+
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Error loading data</p>;
+
+  return (
+    <div>
+      <h1>Test API Data</h1>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </div>
+  );
+}
+Why?
+The useQuery function now expects a single options object with named parameters.
+queryKey identifies the query uniquely.
+queryFn is the async function that fetches data.
+
+If you want me to check your full code or help you migrate to the latest TanStack Query API fully, just ask!
+
+[browser] Uncaught Error: ./app/layout.tsx:19:14
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. "metadata" must be resolved on the server before the page component is rendered. Keep your page as a Server Component and move Client Component logic to a separate file. Read more: https://nextjs.org/docs/app/api-reference/functions/generate-metadata#why-generatemetadata-is-server-component-only
+  17 | });
+  18 |
+> 19 | export const metadata: Metadata = {
+     |              ^^^^^^^^
+  20 |   title: "Create Next App",
+  21 |   description: "Generated by create next app",
+  22 | };
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./app/layout.tsx [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/layout.tsx [Client Component SSR]
+    ./app/layout.tsx [Server Component]
+
+
+    at <unknown> (Error: ./app/layout.tsx:19:14)
+    at <unknown> (Error: (./app/layout.tsx:19:14)
+
+Ah! This is a common Next.js 13 “App Router” issue. The error comes from mixing Client Components ('use client') with server-only features like metadata. Let’s fix it step by step.
+
+🔹 Problem
+
+In your layout.tsx you probably have:
+
+'use client';  // <-- this makes the whole file a Client Component
+
+export const metadata = {
+  title: 'Create Next App',
+  description: 'Generated by create next app',
+};
+
+export default function RootLayout({ children }) {
+  return <html>{children}</html>;
+}
+
+Next.js does not allow exporting metadata from a Client Component. Metadata must be in a Server Component.
+
+🔹 Solution 1: Split client/server logic
+Keep metadata in a Server Component (no 'use client' at the top).
+Wrap any client-only parts (like QueryClientProvider) in a separate Client Component.
+Step A: layout.tsx (Server Component)
+import ClientProviders from './ClientProviders';
+
+export const metadata = {
+  title: 'Create Next App',
+  description: 'Generated by create next app',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body>
+        {/* Wrap client logic here */}
+        <ClientProviders>{children}</ClientProviders>
+      </body>
+    </html>
+  );
+}
+Step B: ClientProviders.tsx (Client Component)
+'use client';
+
+import { ReactNode } from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
+
+export default function ClientProviders({ children }: { children: ReactNode }) {
+  return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;
+}
+
+✅ Now your metadata stays server-side
+✅ Your React Query provider runs client-side
+
+🔹 Why this works
+Server Components: Can export metadata, can run Node/Server code
+Client Components: Can use hooks (useState, useEffect, useQuery)
+Mixing 'use client' with metadata → Next.js error
+🔹 Summary
+Keep metadata in a Server Component (layout.tsx)
+Move all client hooks / providers to a separate 'use client' component (ClientProviders.tsx)
+Wrap children with the Client Component in layout
+
+I can also rewrite your full layout.tsx + React Query setup ready-to-use for Next.js 13 with this fix, so you can copy-paste it.
+
+Do you want me to do that?
+
+Only plain objects, and a few built-ins, can be passed to Client Components from Server Components. Classes or null prototypes are not supported.
+  <... client={{}} children={{...}}>
+
+Ah — now this is the next “classic App Router / Client Component” issue in Next.js 13. It happens because you’re passing a non-serializable object (like a class instance) from a Server Component to a Client Component via props.
+
+🔹 What’s happening
+
+In your setup, you probably have something like this:
+
+// layout.tsx (Server Component)
+import ClientProviders from './ClientProviders';
+
+export const metadata = {
+  title: 'My App',
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html>
+      <body>
+        <ClientProviders client={new QueryClient()}>{children}</ClientProviders>
+      </body>
+    </html>
+  );
+}
+
+Problem: QueryClient is a class instance. Next.js cannot serialize it to pass it to a Client Component.
+
+Only plain objects (like {}), arrays, strings, numbers, booleans, etc. can be passed from Server → Client.
+
+🔹 Solution: Initialize QueryClient inside Client Component
+
+You must create the QueryClient inside the Client Component, not in the Server Component. Do not pass it via props.
+
+✅ Correct Setup
+1️⃣ layout.tsx (Server Component)
+import ClientProviders from './ClientProviders';
+
+export const metadata = {
+  title: 'My App',
+  description: 'Generated by Next.js',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body>
+        {/* Client-only logic inside ClientProviders */}
+        <ClientProviders>{children}</ClientProviders>
+      </body>
+    </html>
+  );
+}
+2️⃣ ClientProviders.tsx (Client Component)
+'use client';
+
+import { ReactNode } from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+// Initialize QueryClient here inside Client Component
+const queryClient = new QueryClient();
+
+export default function ClientProviders({ children }: { children: ReactNode }) {
+  return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;
+}
+🔹 Key Points
+Never pass class instances (like QueryClient, Date, Map, etc.) from Server → Client.
+Only pass plain objects, arrays, strings, numbers, booleans.
+All React Query / Zustand / useState logic must stay inside 'use client' components.
+
+This pattern fixes:
+
+metadata error
+Non-serializable props error
+Hooks working correctly in Client Components
+
+If you want, I can make a full working Next.js 13 layout + React Query + Zustand starter that you can copy-paste and run immediately.
+
+Do you want me to do that?
